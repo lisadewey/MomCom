@@ -15,10 +15,24 @@ namespace MomCom.Models
 
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
+		// Gender of child
+		//public bool Female { get; set; }
+		//public bool Male { get; set; }
+		//public bool Other { get; set; }
 
 		public string AgeRange { get; set; }
+		//// Preferred Age Range of playmate
+		//public RangeAttribute(int 0, int 2) { get; set; }
+		//public string 3-5 { get; set; }
+		//public string 6-8 { get; set; }
+		//public string 9-10 { get; set; }
+
 
 		public string Gender { get; set; }
+		// Preferred gender of playmate
+		//public bool Girl { get; set; }
+		//public bool Boy { get; set; }
+		//public bool Either { get; set; }
 
 		public bool Park { get; set; }
 		public bool Playground { get; set; }
