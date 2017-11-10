@@ -25,9 +25,7 @@ namespace MomCom.Controllers
 			
 			// TODO: Fix this statement so that it actually works...
 			// This is dispaying an item it should not be, curently...
-			return View(db.Profiles.Where(x => x.Gender == "Girl" &
-				x.AgeRange == "0-2" &
-				x.Park | x.Playground | x.Pool).ToList());
+			return View(db.Profiles.Where(x => x.Gender == "Girl" & x.AgeRange == "0-2" & (x.Park | x.Playground | x.Pool)).ToList());
 		}
 	}
 }
