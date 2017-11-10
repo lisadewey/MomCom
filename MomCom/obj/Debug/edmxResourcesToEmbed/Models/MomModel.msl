@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="MomComDBModelStoreContainer" CdmEntityContainer="MomComDBEntities">
-    <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="MomComDBModel.User">
+  <EntityContainerMapping StorageEntityContainer="MomComDBModelStoreContainer" CdmEntityContainer="MomComDBEntities1">
+    <EntitySetMapping Name="Users1">
+      <EntityTypeMapping TypeName="MomComDBModel.Users">
         <MappingFragment StoreEntitySet="Users">
-          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="AgeRange1" ColumnName="AgeRange1" />
           <ScalarProperty Name="AgeRange2" ColumnName="AgeRange2" />
           <ScalarProperty Name="AgeRange3" ColumnName="AgeRange3" />
           <ScalarProperty Name="Gender" ColumnName="Gender" />
-          <ScalarProperty Name="Interest1" ColumnName="Interest1" />
-          <ScalarProperty Name="Interest2" ColumnName="Interest2" />
-          <ScalarProperty Name="Interest3" ColumnName="Interest3" />
+          <ScalarProperty Name="Museum" ColumnName="Museum" />
+          <ScalarProperty Name="Outdoors" ColumnName="Outdoors" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Phone" ColumnName="Phone" />
         </MappingFragment>

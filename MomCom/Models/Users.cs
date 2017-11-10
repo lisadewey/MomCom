@@ -12,17 +12,17 @@ namespace MomCom.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class Users
     {
-        public int PersonID { get; set; }
+        public int PersonId { get; set; }
         public string FirstName { get; set; }
-        public string AgeRange1 { get; set; }
-        public string AgeRange2 { get; set; }
-        public string AgeRange3 { get; set; }
+        public Nullable<bool> AgeRange1 { get; set; }
+        public Nullable<bool> AgeRange2 { get; set; }
+        public Nullable<bool> AgeRange3 { get; set; }
         public string Gender { get; set; }
-        public string Interest1 { get; set; }
-        public string Interest2 { get; set; }
-        public string Interest3 { get; set; }
+        public Nullable<bool> Museum { get; set; }
+        public Nullable<bool> Outdoors { get; set; }
+        public Nullable<bool> Active { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
     }

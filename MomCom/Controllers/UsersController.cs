@@ -12,12 +12,12 @@ namespace MomCom.Controllers
 {
     public class UsersController : Controller
     {
-        private MomComDBEntities db = new MomComDBEntities();
+        private MomComDBEntities1 db = new MomComDBEntities1();
 
         // GET: Users
         public ActionResult Index()
         {
-            return View(db.Users.ToList());
+            return View(db.Users1.ToList());
         }
 
         // GET: Users/Details/5
@@ -27,12 +27,12 @@ namespace MomCom.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Find(id);
-            if (user == null)
+            Users users = db.Users1.Find(id);
+            if (users == null)
             {
                 return HttpNotFound();
             }
-            return View(user);
+            return View(users);
         }
 
         // GET: Users/Create
@@ -46,16 +46,16 @@ namespace MomCom.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PersonID,FirstName,AgeRange1,AgeRange2,AgeRange3,Gender,Interest1,Interest2,Interest3,Email,Phone")] User user)
+        public ActionResult Create([Bind(Include = "PersonId,FirstName,AgeRange1,AgeRange2,AgeRange3,Gender,Museum,Outdoors,Active,Email,Phone")] Users users)
         {
             if (ModelState.IsValid)
             {
-                db.Users.Add(user);
+                db.Users1.Add(users);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(user);
+            return View(users);
         }
 
         // GET: Users/Edit/5
@@ -65,12 +65,12 @@ namespace MomCom.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Find(id);
-            if (user == null)
+            Users users = db.Users1.Find(id);
+            if (users == null)
             {
                 return HttpNotFound();
             }
-            return View(user);
+            return View(users);
         }
 
         // POST: Users/Edit/5
@@ -78,15 +78,15 @@ namespace MomCom.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PersonID,FirstName,AgeRange1,AgeRange2,AgeRange3,Gender,Interest1,Interest2,Interest3,Email,Phone")] User user)
+        public ActionResult Edit([Bind(Include = "PersonId,FirstName,AgeRange1,AgeRange2,AgeRange3,Gender,Museum,Outdoors,Active,Email,Phone")] Users users)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(user).State = EntityState.Modified;
+                db.Entry(users).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(user);
+            return View(users);
         }
 
         // GET: Users/Delete/5
@@ -96,12 +96,12 @@ namespace MomCom.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            User user = db.Users.Find(id);
-            if (user == null)
+            Users users = db.Users1.Find(id);
+            if (users == null)
             {
                 return HttpNotFound();
             }
-            return View(user);
+            return View(users);
         }
 
         // POST: Users/Delete/5
@@ -109,8 +109,8 @@ namespace MomCom.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            User user = db.Users.Find(id);
-            db.Users.Remove(user);
+            Users users = db.Users1.Find(id);
+            db.Users1.Remove(users);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
