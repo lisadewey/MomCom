@@ -13,10 +13,10 @@ namespace MomCom.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MomComDBEntities : DbContext
+    public partial class MomComDBEntities1 : DbContext
     {
-        public MomComDBEntities()
-            : base("name=MomComDBEntities")
+        public MomComDBEntities1()
+            : base("name=MomComDBEntities1")
         {
         }
     
@@ -25,6 +25,6 @@ namespace MomCom.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Users> Users1 { get; set; }
     }
 }

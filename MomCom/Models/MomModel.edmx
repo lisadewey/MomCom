@@ -7,18 +7,18 @@
       <Schema Namespace="MomComDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Users">
           <Key>
-            <PropertyRef Name="PersonID" />
+            <PropertyRef Name="PersonId" />
           </Key>
-          <Property Name="PersonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FirstName" Type="text" />
-          <Property Name="AgeRange1" Type="text" />
-          <Property Name="AgeRange2" Type="text" />
-          <Property Name="AgeRange3" Type="text" />
+          <Property Name="PersonId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="text" Nullable="false" />
+          <Property Name="AgeRange1" Type="bit" />
+          <Property Name="AgeRange2" Type="bit" />
+          <Property Name="AgeRange3" Type="bit" />
           <Property Name="Gender" Type="text" />
-          <Property Name="Interest1" Type="text" />
-          <Property Name="Interest2" Type="text" />
-          <Property Name="Interest3" Type="text" />
-          <Property Name="Email" Type="text" />
+          <Property Name="Museum" Type="bit" />
+          <Property Name="Outdoors" Type="bit" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="Email" Type="text" Nullable="false" />
           <Property Name="Phone" Type="text" />
         </EntityType>
         <EntityContainer Name="MomComDBModelStoreContainer">
@@ -29,43 +29,43 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MomComDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="User">
+        <EntityType Name="Users">
           <Key>
-            <PropertyRef Name="PersonID" />
+            <PropertyRef Name="PersonId" />
           </Key>
-          <Property Name="PersonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="AgeRange1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="AgeRange2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="AgeRange3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PersonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AgeRange1" Type="Boolean" />
+          <Property Name="AgeRange2" Type="Boolean" />
+          <Property Name="AgeRange3" Type="Boolean" />
           <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Interest1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Interest2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Interest3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Museum" Type="Boolean" />
+          <Property Name="Outdoors" Type="Boolean" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="MomComDBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Users" EntityType="Self.User" />
+        <EntityContainer Name="MomComDBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Users1" EntityType="MomComDBModel.Users" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MomComDBModelStoreContainer" CdmEntityContainer="MomComDBEntities">
-          <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="MomComDBModel.User">
+        <EntityContainerMapping StorageEntityContainer="MomComDBModelStoreContainer" CdmEntityContainer="MomComDBEntities1">
+          <EntitySetMapping Name="Users1">
+            <EntityTypeMapping TypeName="MomComDBModel.Users">
               <MappingFragment StoreEntitySet="Users">
-                <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+                <ScalarProperty Name="PersonId" ColumnName="PersonId" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="AgeRange1" ColumnName="AgeRange1" />
                 <ScalarProperty Name="AgeRange2" ColumnName="AgeRange2" />
                 <ScalarProperty Name="AgeRange3" ColumnName="AgeRange3" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
-                <ScalarProperty Name="Interest1" ColumnName="Interest1" />
-                <ScalarProperty Name="Interest2" ColumnName="Interest2" />
-                <ScalarProperty Name="Interest3" ColumnName="Interest3" />
+                <ScalarProperty Name="Museum" ColumnName="Museum" />
+                <ScalarProperty Name="Outdoors" ColumnName="Outdoors" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
               </MappingFragment>
