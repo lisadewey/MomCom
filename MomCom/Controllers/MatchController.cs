@@ -12,20 +12,44 @@ namespace MomCom.Controllers
 {
 	public class MatchController : Controller
 	{
-		private DatabaseContext db = new DatabaseContext();
+		private MomComDBEntities1 db = new MomComDBEntities1();
 
-		// GET: Matches
+		// GET: Match
 		public ActionResult Index()
 		{
-			////List<Profile> profiles = db.Profiles.Where(
-			//	x => x.Gender == "Girl" &
-			//	     x.AgeRange == "0-2" &
-			//	     x.Park | x.Playground | x.Pool).ToList(); TODO: insert database query and profile match results...
-			//return View(db.Profiles.ToList());
-			
-			// TODO: Fix this statement so that it actually works...
-			// This is dispaying an item it should not be, curently...
-			return View(db.Profiles.Where(x => x.Gender == "Girl" & x.AgeRange == "0-2" & (x.Park | x.Playground | x.Pool)).ToList());
+			var me = Session["me"] as Users;
+
+			bool age1 = me.AgeRange1;
+			bool age2 = me.AgeRange2;
+			bool age3 = me.AgeRange3;
+			bool museum = me.Museum;
+			bool active = me.Active;
+			bool outdoors = me.Outdoors;
+
+			return View(
+				db.Users1.Where(
+						x => x.Gender == me.Gender &
+							 (x.AgeRange1 == age1 | x.AgeRange2 == age2 | x.AgeRange3 == age3) &
+							 (x.Museum == museum | x.Outdoors == outdoors | x.Active == active))
+					.ToList());
+
+			// Should be incorporated into a Search View and Controller, which kicks us here.
+			// Allows to match any gender, and parent can decide 
+			// if they want to go to just a boy, girl, or either event.
+			//return View(
+			//	db.Users1.Where(
+			//			x => (x.AgeRange1 == age1 | x.AgeRange2 == age2 | x.AgeRange3 == age3) &
+			//			     (x.Museum == museum | x.Outdoors == outdoors | x.Active == active))
+			//		.ToList());
+		}
+
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing)
+			{
+				db.Dispose();
+			}
+			base.Dispose(disposing);
 		}
 	}
 }

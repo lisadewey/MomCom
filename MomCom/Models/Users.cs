@@ -11,19 +11,24 @@ namespace MomCom.Models
 {
     using System;
     using System.Collections.Generic;
+	using System.ComponentModel.DataAnnotations;
     
     public partial class Users
     {
         public int PersonId { get; set; }
+		[Required]
         public string FirstName { get; set; }
-        public Nullable<bool> AgeRange1 { get; set; }
-        public Nullable<bool> AgeRange2 { get; set; }
-        public Nullable<bool> AgeRange3 { get; set; }
+        public bool AgeRange1 { get; set; }
+        public bool AgeRange2 { get; set; }
+        public bool AgeRange3 { get; set; }
+		[Required]
         public string Gender { get; set; }
-        public Nullable<bool> Museum { get; set; }
-        public Nullable<bool> Outdoors { get; set; }
-        public Nullable<bool> Active { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
+        public bool Museum { get; set; }
+        public bool Outdoors { get; set; }
+        public bool Active { get; set; }
+	    [Required]
+		public string Email { get; set; }
+	    [Required]
+		public string Phone { get; set; }
     }
 }

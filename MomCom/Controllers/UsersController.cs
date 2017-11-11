@@ -52,7 +52,10 @@ namespace MomCom.Controllers
             {
                 db.Users1.Add(users);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+
+	            Session["me"] = users;
+
+                return RedirectToAction("Index", "Match");
             }
 
             return View(users);
