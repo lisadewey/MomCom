@@ -24,7 +24,7 @@ namespace MomCom.Models
 
 		// public virtual DbSet<MyEntity> MyEntities { get; set; }
 
-		public virtual DbSet<Profile> Profiles { get; set; }
+		public virtual DbSet<Users> Users { get; set; }
 	}
 
 	//public class MyEntity
