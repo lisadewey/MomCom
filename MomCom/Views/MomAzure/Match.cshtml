@@ -1,12 +1,12 @@
-﻿@model IEnumerable<MomCom.Models.User>
+﻿@*@model MomCom.Models.User*@
 
 @{
     ViewBag.Title = "This is your Match!";
 }
 
 <h2>Match</h2>
-
-<p>
+<h2>@ViewBag.Matches</h2>
+@*<p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
@@ -84,4 +84,5 @@
     </tr>
 }
 
-</table>
+</table>*@
+<p>@ViewBag.Place</p>

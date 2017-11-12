@@ -38,11 +38,11 @@ namespace MomCom.Controllers
         //THIS IS IN PLACE OF LISA's MATCH CONTROLLER SO WE CAN KEEP MOVING
         public ActionResult Match()
         {
-            User user = db.Users.Find(1);
+            User newUser = db.Users.Find(1);
 
-            bool museum = user.Museum;
-            bool active = user.Active;
-            bool outdoors = user.Outdoors;
+            bool museum = newUser.Museum;
+            bool active = newUser.Active;
+            bool outdoors = newUser.Outdoors;
 
             string place = GetInterest(museum, outdoors, active);
 
@@ -53,14 +53,12 @@ namespace MomCom.Controllers
             }
 
 
-            //List<User> allUsers = db.Users.ToList();
-
-            //List<User> matchList =
-
-            //    for...
-            //    if...
-            //        matchList.Add(Match);
-
+            List<User> allUsers = db.Users.ToList();
+            List<User> matchesList = GetMatches(allUsers, newUser);
+            for (int i = 0; i < matchesList.Count(); i++)
+            {
+                ViewBag.Matches += matchesList[i];
+            }
             return View();
         }
 
@@ -169,6 +167,7 @@ namespace MomCom.Controllers
             }
         }
 
+
         public List<string> GetPlaces(string p)
         {
             string place = p;
@@ -207,5 +206,24 @@ namespace MomCom.Controllers
             }
             return placesList;
         }
+        public List<User> GetMatches(List<User> all, User n)
+        {
+            List<User> matchesList = new List<User>();
+            for (int i = 0; i < all.Count(); i++)
+            {
+                foreach (User u in all)
+                {
+                    if ((u.Museum == n.Museum) || (u.Outdoors == n.Outdoors) || (u.Active == n.Active))
+                    {
+                        User match = u;
+                        matchesList.Add(match);
+                        return matchesList;
+                    }
+                }
+            }
+            return matchesList;
+        }
+
+
     }
 }

@@ -9,6 +9,9 @@
 
 namespace MomCom.Models
 {
+    using System;
+    using System.Collections.Generic;
+    
     public partial class User
     {
         public int PersonId { get; set; }
