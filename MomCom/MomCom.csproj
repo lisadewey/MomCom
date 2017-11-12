@@ -197,6 +197,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MatchController.cs" />
+    <Compile Include="Controllers\MomAzureController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -232,7 +233,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MomModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\MomsAzure.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MomsAzure.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MomsAzure.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MomsAzure.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MomsAzure.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MomsAzure.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Profile.cs" />
+    <Compile Include="Models\User.cs">
+      <DependentUpon>MomsAzure.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Users.cs">
       <DependentUpon>MomModel.tt</DependentUpon>
     </Compile>
@@ -260,6 +279,16 @@
       <DependentUpon>MomModel.edmx</DependentUpon>
       <LastGenOutput>MomModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\MomsAzure.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MomsAzure.edmx</DependentUpon>
+      <LastGenOutput>MomsAzure.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\MomsAzure.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MomsAzure.edmx</DependentUpon>
+      <LastGenOutput>MomsAzure.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -271,6 +300,13 @@
     </EntityDeploy>
     <Content Include="Models\MomModel.edmx.diagram">
       <DependentUpon>MomModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\MomsAzure.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MomsAzure.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\MomsAzure.edmx.diagram">
+      <DependentUpon>MomsAzure.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -326,6 +362,12 @@
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Match\Index.cshtml" />
+    <Content Include="Views\MomAzure\Create.cshtml" />
+    <Content Include="Views\MomAzure\Delete.cshtml" />
+    <Content Include="Views\MomAzure\Details.cshtml" />
+    <Content Include="Views\MomAzure\Edit.cshtml" />
+    <Content Include="Views\MomAzure\Index.cshtml" />
+    <Content Include="Views\MomAzure\Match.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

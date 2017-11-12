@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MomCom.Models.Users>
+﻿@model IEnumerable<MomCom.Models.User>
 
 @{
     ViewBag.Title = "Index";
@@ -7,39 +7,41 @@
 <h2>Index</h2>
 
 <p>
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            Parent's First Name
+            @Html.DisplayNameFor(model => model.FirstName)
         </th>
         <th>
-            Age 0-3
+            @Html.DisplayNameFor(model => model.AgeRange1)
         </th>
         <th>
-            Age 4-7
+            @Html.DisplayNameFor(model => model.AgeRange2)
         </th>
         <th>
-            Age 8-10
+            @Html.DisplayNameFor(model => model.AgeRange3)
         </th>
         <th>
-            Gender
+            @Html.DisplayNameFor(model => model.Gender)
         </th>
         <th>
-            Museum
+            @Html.DisplayNameFor(model => model.Museum)
         </th>
         <th>
-            Outdoors
+            @Html.DisplayNameFor(model => model.Outdoors)
         </th>
         <th>
-            Active
+            @Html.DisplayNameFor(model => model.Active)
         </th>
         <th>
-            Email
+            @Html.DisplayNameFor(model => model.Email)
         </th>
         <th>
-            Phone
+            @Html.DisplayNameFor(model => model.Phone)
         </th>
+        <th></th>
     </tr>
 
 @foreach (var item in Model) {
@@ -74,10 +76,12 @@
         <td>
             @Html.DisplayFor(modelItem => item.Phone)
         </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PersonId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PersonId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PersonId })
+        </td>
     </tr>
 }
 
 </table>
-
-<h3>Suggested playdate locations!!!</h3>
-<p>@ViewBag.Place</p>

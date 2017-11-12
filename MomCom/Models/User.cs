@@ -9,10 +9,7 @@
 
 namespace MomCom.Models
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class Users
+    public partial class User
     {
         public int PersonId { get; set; }
         public string FirstName { get; set; }
