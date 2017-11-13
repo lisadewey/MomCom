@@ -7,23 +7,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Web.Mvc;
+
 namespace MomCom.Models
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class User
-    {
-        public int PersonId { get; set; }
-        public string FirstName { get; set; }
-        public bool AgeRange1 { get; set; }
-        public bool AgeRange2 { get; set; }
-        public bool AgeRange3 { get; set; }
-        public string Gender { get; set; }
-        public bool Museum { get; set; }
-        public bool Outdoors { get; set; }
-        public bool Active { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
-    }
+	using System;
+	using System.Collections.Generic;
+	
+	public partial class User
+	{
+		public int PersonId { get; set; }
+		public string FirstName { get; set; }
+		public bool AgeRange1 { get; set; }
+		public bool AgeRange2 { get; set; }
+		public bool AgeRange3 { get; set; }
+		public string Gender { get; set; }
+		public bool Museum { get; set; }
+		public bool Outdoors { get; set; }
+		public bool Active { get; set; }
+		public string Email { get; set; }
+		public string Phone { get; set; }
+	}
 }
