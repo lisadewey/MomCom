@@ -1,88 +1,95 @@
-﻿@*@model MomCom.Models.User*@
+﻿
+@using System.Activities.Statements
+@using MomCom.Controllers
+@model IEnumerable<MomCom.Models.User>
 
 @{
-    ViewBag.Title = "This is your Match!";
+	ViewBag.Title = "Match";
 }
 
-<h2>Match</h2>
-<h2>@ViewBag.Matches</h2>
-@*<p>
-    @Html.ActionLink("Create New", "Create")
+<h2>Index</h2>
+
+<p>
 </p>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AgeRange1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AgeRange2)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AgeRange3)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Gender)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Museum)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Outdoors)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Active)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Phone)
-        </th>
-        <th></th>
-    </tr>
+	<tr>
+		<th>
+			Parent's First Name
+		</th>
+		<th>
+			Age 0-3
+		</th>
+		<th>
+			Age 4-7
+		</th>
+		<th>
+			Age 8-10
+		</th>
+		<th>
+			Gender
+		</th>
+		<th>
+			Museum
+		</th>
+		<th>
+			Outdoors
+		</th>
+		<th>
+			Active
+		</th>
+		<th>
+			Email
+		</th>
+		<th>
+			Phone
+		</th>
+	</tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AgeRange1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AgeRange2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AgeRange3)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Gender)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Museum)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Outdoors)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Active)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Phone)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PersonId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.PersonId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.PersonId })
-        </td>
-    </tr>
-}
+	@foreach (var item in ((MomAzureController)this.ViewContext.Controller).Matches())
+	{
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.FirstName)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.AgeRange1)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.AgeRange2)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.AgeRange3)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Gender)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Museum)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Outdoors)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Active)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Email)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Phone)
+			</td>
+		</tr>
+	}
 
-</table>*@
-<p>@ViewBag.Place</p>
+</table>
+
+<h3>Suggested playdate locations!!!</h3>
+
+<table class="table">
+	@foreach (var m in ((MomAzureController)this.ViewContext.Controller).Places())
+	{
+		<tr>
+			<td>@m</td>
+		</tr>
+	}
+	</table>
