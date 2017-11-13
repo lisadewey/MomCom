@@ -198,7 +198,6 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MatchController.cs" />
     <Compile Include="Controllers\MomAzureController.cs" />
-    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -215,24 +214,9 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\DatabaseContext.cs" />
+    <Compile Include="Models\DatabaseContext-backup.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\MomModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MomModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\MomModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MomModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\MomModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MomModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\MomsAzure.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -252,9 +236,6 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>MomsAzure.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Users.cs">
-      <DependentUpon>MomModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -269,16 +250,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\MomModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MomModel.edmx</DependentUpon>
-      <LastGenOutput>MomModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\MomModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MomModel.edmx</DependentUpon>
-      <LastGenOutput>MomModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Models\MomsAzure.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>MomsAzure.edmx</DependentUpon>
@@ -293,13 +264,6 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <EntityDeploy Include="Models\MomModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MomModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\MomModel.edmx.diagram">
-      <DependentUpon>MomModel.edmx</DependentUpon>
     </Content>
     <EntityDeploy Include="Models\MomsAzure.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -356,12 +320,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Users\Create.cshtml" />
-    <Content Include="Views\Users\Delete.cshtml" />
-    <Content Include="Views\Users\Details.cshtml" />
-    <Content Include="Views\Users\Edit.cshtml" />
-    <Content Include="Views\Users\Index.cshtml" />
-    <Content Include="Views\Match\Index.cshtml" />
     <Content Include="Views\MomAzure\Create.cshtml" />
     <Content Include="Views\MomAzure\Delete.cshtml" />
     <Content Include="Views\MomAzure\Details.cshtml" />
