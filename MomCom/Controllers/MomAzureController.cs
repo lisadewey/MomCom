@@ -251,12 +251,22 @@ namespace MomCom.Controllers
 		public List<User> GetMatches(List<User> all, User me)
 		{
 			List<User> matchesList = new List<User>();
+			List<User> ageMatch = new List<User>();
 
 			foreach (User u in all)
 			{
-				if ((u.Museum == me.Museum) | (u.Outdoors == me.Outdoors) | (u.Active == me.Active))
+				if (u.AgeRange1 == me.AgeRange1 && u.AgeRange2 == me.AgeRange2 && u.AgeRange3 == me.AgeRange3)
+				{
+					ageMatch.Add(u);
+				}
+			}
+
+			foreach (User u in ageMatch)
+			{
+				if ((u.Museum == me.Museum) && (u.Outdoors == me.Outdoors) && (u.Active == me.Active) && (u.PersonId != me.PersonId))
 				{
 					matchesList.Add(u);
+
 				}
 			}
 
