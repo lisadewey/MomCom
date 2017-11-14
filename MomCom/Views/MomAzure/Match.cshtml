@@ -1,15 +1,12 @@
-﻿
-@using System.Activities.Statements
+﻿@using System.Activities.Statements
 @using MomCom.Controllers
 @model IEnumerable<MomCom.Models.User>
-
 @{
 	ViewBag.Title = "Match";
 }
-
 <h2>Index</h2>
-
 <p>
+	We found other mom's like you!
 </p>
 <table class="table">
 	<tr>
@@ -44,7 +41,6 @@
 			Phone
 		</th>
 	</tr>
-
 	@foreach (var item in ((MomAzureController)this.ViewContext.Controller).Matches())
 	{
 		<tr>
@@ -80,11 +76,8 @@
 			</td>
 		</tr>
 	}
-
 </table>
-
 <h3>Suggested playdate locations!!!</h3>
-
 <table class="table">
 	@foreach (var m in ((MomAzureController)this.ViewContext.Controller).Places())
 	{
@@ -92,4 +85,5 @@
 			<td>@m</td>
 		</tr>
 	}
-	</table>
+</table>
+
