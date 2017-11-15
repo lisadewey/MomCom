@@ -8,9 +8,9 @@
 	color:#666;
 }
 
-.image1, .image2, .image3, .image4{
+.image1,{
 	position:relative;
-	opacity:0.70;
+	opacity:0.95;
 	background-position:center;
 	background-size:cover;
 	background-repeat:no-repeat;
@@ -22,20 +22,6 @@
 	min-height:100%;
 }
 
-.image2{
-	background-image:url('./images/img2.jpg');
-	min-height:600px;
-}
-
-.image3{
-	background-image:url('../img/image3.jpg');
-	min-height:600px;
-}
-
-.image4{
-	background-image:url('../img/image4.jpg');
-	min-height:600px;
-}
 
 .section{
 	text-align:center;
@@ -60,7 +46,7 @@
 	position:absolute;
 	top:50%;
 	width:100%;
-	text-align:center;
+	/*text-align:center;*/
 	color:#000;
 	font-size:27px;
 	letter-spacing:8px;

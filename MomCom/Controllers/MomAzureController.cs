@@ -69,6 +69,7 @@ namespace MomCom.Controllers
 			return matches;
 		}
 
+
 		public List<string> Places()
 		{
 			List<string> places = (List<string>)Session["places"];

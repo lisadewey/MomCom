@@ -242,8 +242,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\images\img1.jpg" />
-    <Content Include="Content\images\img2.jpg" />
+    <Content Include="Content\images\image1.jpg" />
     <Content Include="Content\momcom.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
