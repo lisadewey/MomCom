@@ -201,7 +201,7 @@ namespace MomCom.Controllers
 
 			if (museum)
 			{
-				request = WebRequest.CreateHttp("http://places.demo.api.here.com/places/v1/discover/search?q=museum&in=42.921%2C-85.5944%3Br%3D45033&Accept-Language=en-US%2Cen%3Bq%3D0.8/application/json&app_id=EVCVXo26lL5LrdGgDEK5&app_code=J9PlnJ5WvHIuxtYvVMwiYw");
+				request = WebRequest.CreateHttp("http://places.cit.api.here.com/places/v1/discover/search?q=museum&in=42.921%2C-85.5944%3Br%3D45033&Accept-Language=en-US%2Cen%3Bq%3D0.8/application/json&app_id=EVCVXo26lL5LrdGgDEK5&app_code=J9PlnJ5WvHIuxtYvVMwiYw");
 				placesList = PlacesList(request);
 			}
 
@@ -213,7 +213,7 @@ namespace MomCom.Controllers
 
 			if (bowling)
 			{
-				request = WebRequest.CreateHttp("http://places.demo.api.here.com/places/v1/discover/search?q=bowling&in=42.921%2C-85.5944%3Br%3D45033&Accept-Language=en-US%2Cen%3Bq%3D0.8/application/json&app_id=EVCVXo26lL5LrdGgDEK5&app_code=J9PlnJ5WvHIuxtYvVMwiYw");
+				request = WebRequest.CreateHttp("http://places.cit.api.here.com/places/v1/discover/search?q=bowling&in=42.921%2C-85.5944%3Br%3D45033&Accept-Language=en-US%2Cen%3Bq%3D0.8/application/json&app_id=EVCVXo26lL5LrdGgDEK5&app_code=J9PlnJ5WvHIuxtYvVMwiYw");
 				placesList.AddRange(PlacesList(request));
 			}
 
