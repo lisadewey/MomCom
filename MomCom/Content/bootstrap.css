@@ -2052,9 +2052,9 @@ fieldset[disabled] .btn {
 }
 
 .btn-default {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
+	color: #333333;
+	background-color: #ffffff;
+	border-color: #cccccc;
 }
 
 .btn-default:hover,
@@ -2065,6 +2065,8 @@ fieldset[disabled] .btn {
   color: #333333;
   background-color: #ebebeb;
   border-color: #adadad;
+}
+
 }
 
 .btn-default:active,

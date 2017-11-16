@@ -199,12 +199,9 @@
     <Compile Include="Controllers\MatchController.cs" />
     <Compile Include="Controllers\MomAzureController.cs" />
     <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="Default.aspx.designer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -242,9 +239,14 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\git.jpg" />
     <Content Include="Content\images\image1.jpg" />
+    <Content Include="Content\images\karina.JPG" />
+    <Content Include="Content\images\linkedIn.jpg" />
+    <Content Include="Content\images\lisa.JPG" />
+    <Content Include="Content\images\rebecca.JPG" />
+    <Content Include="Content\images\tammy.JPG" />
     <Content Include="Content\momcom.css" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -293,7 +295,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
