@@ -21,9 +21,9 @@
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				@*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
 				<li>@Html.ActionLink("Why Moms??", "About", "Home")</li>
 				<li>@Html.ActionLink("COMmunicate", "Contact", "Home")</li>
+				<li>@Html.ActionLink("Create a Playfile", "Create", "MomAzure")</li>
 			</ul>
 			@Html.Partial("_LoginPartial")
 		</div>
@@ -33,7 +33,7 @@
 	@RenderBody()
 	<hr />
 	<footer>
-		<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+		<p>&copy; @DateTime.Now.Year - MOMCOM</p>
 	</footer>
 </div>
 

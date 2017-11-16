@@ -1,73 +1,77 @@
 ﻿<style>
-	body, html{
-		height:100%;
-		margin:0;
-		font-size:16px;
-		font-family:"Lato", sans-serif;
-		font-weight:400;
-		line-height:1.8em;
-		color:#666;
+	body, html {
+		height: 100%;
+		margin: 0;
+		font-size: 16px;
+		font-family: "Lato", sans-serif;
+		font-weight: 400;
+		line-height: 1.8em;
+		color: #333;
 	}
 
 	.spacing {
-
 		width: 100%;
 		height: 700px;
 	}
 
 	.image1 {
-		position:relative;
-		opacity:0.95;
-		background-position:center;
-		background-size:cover;
-		background-repeat:no-repeat;
-		background-attachment:fixed;
+		position: relative;
+		opacity: .95;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		
 	}
 
-	.image1{
-		background-image:url('../Content/images/image1.jpg');
-		min-height:100%;
+	.image1 {
+		background-image: url('../Content/images/image1.jpg');
+		min-height: 100%;
 	}
 
-	.section{
-		text-align:center;
-		padding:50px 80px;
+	.section {
+		text-align: center;
+		padding: 50px 80px;
 	}
 
-	.section p{
-		text-align:left;
+		.section p {
+			text-align: left;
+		}
+
+	.section-light {
+		background-color: #f4f4f4;
+		color: #333;
 	}
 
-	.section-light{
-		background-color:#f4f4f4;
-		color:#666;
+	.section-dark {
+		background-color: #00ccdc;
+		color: #333;
 	}
-
-	.section-dark{
-		background-color:#00ccdc;
-		color:#ddd;
+	.momcom-trans {
+		font-size: 40px;
+		font-weight: bold;
+		color: white;
 	}
-
-	.ptext{
-		position:absolute;
-		top:50%;
-		width:100%;
-		text-align:center;
+	.ptext {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		text-align: center;
 		color: black;
-		font-size:27px;
-		letter-spacing:8px;
-		text-transform:uppercase;
+		font-size: 27px;
+		letter-spacing: 8px;
+		text-transform: uppercase;
 	}
 
-	.ptext .border{
-		background-color:#111;
-		color:#fff;
-		padding:20px;
-	}
+		.ptext .border {
+			background-color: #111;
+			color: #fff;
+			padding: 20px;
+		}
 
-	.ptext .border.trans{
-		background-color:transparent;
-	}
+			.ptext .border.trans {
+				background-color: transparent;
+			}
 
 	.newsletter {
 		background-color: #666;
@@ -75,55 +79,209 @@
 		display: inline-block;
 	}
 
-	.button{
-		color:#666;
-		font-size:14px;
-		text-align:center;
-		height:22px;
-		width:80px;
+	.button {
+		color: #666;
+		font-size: 14px;
+		text-align: center;
+		height: 22px;
+		width: 80px;
 	}
 
-	
-	@*.image1, .image2, .image3, .image4{
-		background-attachment:scroll;
-	}*@
-	</style>
+	.btn btn-default {
+		background-color: transparent;
+		border: 2px solid white;
+		color: white;
+		padding: 15px 32px;
+		margin-top: 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+	}
+
+		.btn btn-default:hover {
+			background-color: #4CAF50; /* Green */
+			border: 2px solid white;
+			color: white;
+			padding: 15px 32px;
+			margin-top: 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+		}
+
+
+	@*.image1, .image2, .image3, .image4 {
+		background-attachment: scroll;
+	}
+
+	*@
+</style>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Web of Wisdom</title>
-  <link rel="stylesheet" href="css/momcom.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>MOMCOM</title>
+	<link rel="stylesheet" href="css/momcom.css">
 
 </head>
 <body class="image1">
-  <div class="image1">
-	  <div class="ptext">
-		  @*<span class="border">
-			  MOMCOM
-		  </span>*@
-	  </div>
-  <div class="spacing">
-	  <span class="border">
-		  MOMCOM
-	  </span>
+@*<div>
+	<a href="playfile">Create a Profile!</a>
+</div>*@
+<div class="image1" margin-top: 400px>
+	<div class="ptext">
+		<span class="border">
+	MOMCOM
+		</span>
+	</div>
+	@*<span class="momcom-trans">
+		MOMCOM
+	</span>*@
+</div>
+<div class="image1">
+		<div class="ptext">
+			@*<span class="border">
+					MOMCOM
+				</span>*@
+		</div>
+		<div class="spacing">
+			
+	</div>
 
-  </div>
-  <section class="section section-dark">
-	  <p>
-	  </br>
-		@using (Html.BeginForm())
-		{
-			@Html.AntiForgeryToken()
-			<h1>PLAYFILE</h1>
-			<h3>Find Playmates & Make Playdates!</h3>
-			<head>
-			</head>
-			<body>
-			<div class="form-horizontal">
+	<section class="section section-dark">
+		<p>
+			<br>
+			@using (Html.BeginForm())
+			{
+				@Html.AntiForgeryToken()
+				@*<a id ="playfile">*@
+		<h1>PLAYFILE</h1>
+					@*</a>*@
+				<h3>Find Playmates & Make Playdates!</h3>
+				<body>
+					<div class="form-horizontal">
+						<!-- <h4>User</h4> -->
+						<hr />
+						@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+						<!-- <div class="form-group">
+			@Html.LabelFor(model => model.PersonId, htmlAttributes: new { @class = "control-label col-md-2" })
+			<div class="col-md-10">
+				@Html.EditorFor(model => model.PersonId, new { htmlAttributes = new { @class = "form-control" } })
+				@Html.ValidationMessageFor(model => model.PersonId, "", new { @class = "text-danger" })
+			</div>
+		</div>-->
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<createtitle>Parent Name</createtitle>
+								@Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+								@Html.ValidationMessageFor(model => model.FirstName, "A parent name is required.", new { @class = "text-danger" })
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.AgeRange1, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<div class="checkbox">
+									@Html.EditorFor(model => model.AgeRange1)
+									@Html.ValidationMessageFor(model => model.AgeRange1, "", new { @class = "text-danger" })
+									<createtitle>Age 0-3</createtitle>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.AgeRange2, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<div class="checkbox">
+									@Html.EditorFor(model => model.AgeRange2)
+									@Html.ValidationMessageFor(model => model.AgeRange2, "", new { @class = "text-danger" })
+									<createtitle>Age 4-7</createtitle>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.AgeRange3, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<div class="checkbox">
+									@Html.EditorFor(model => model.AgeRange3)
+									@Html.ValidationMessageFor(model => model.AgeRange3, "", new { @class = "text-danger" })
+									<createtitle>Age 8-10</createtitle>
+								</div>
+							</div>
+						</div>
+						@{
+							var genders = new SelectList(new[]
+							{
+						new SelectListItem { Text = "Girl", Value = "Girl"},
+						new SelectListItem { Text = "Boy", Value = "Boy"},
+					}, "Text", "Value");
+						}
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<createtitle>Child's Gender</createtitle>
+								@Html.DropDownListFor(model => model.Gender, @genders)
+								@Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.Museum, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<div class="checkbox">
+									<createtitle>Museum</createtitle>
+									@Html.EditorFor(model => model.Museum)
+									@Html.ValidationMessageFor(model => model.Museum, "", new { @class = "text-danger" })
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.Outdoors, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<div class="checkbox">
+									<createtitle>Outdoors</createtitle>
+									@Html.EditorFor(model => model.Outdoors)
+									@Html.ValidationMessageFor(model => model.Outdoors, "", new { @class = "text-danger" })
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.Active, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<div class="checkbox">
+									<createtitle>Active</createtitle>
+									@Html.EditorFor(model => model.Active)
+									@Html.ValidationMessageFor(model => model.Active, "", new { @class = "text-danger" })
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<createtitle>Email</createtitle>
+								@Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+								@Html.ValidationMessageFor(model => model.Email, "An email is required.", new { @class = "text-danger" })
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<createtitle>Phone</createtitle>
+								@Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+								@Html.ValidationMessageFor(model => model.Phone, "A phone number is required.", new { @class = "text-danger" })
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-10">
+								<input type="submit" value="Find Playmates!" class="btn btn-default" />
+							</div>
+						</div>
+					</div>
+				</body>
+				@*<div class="form-horizontal">
 				<!-- <h4>User</h4> -->
 				<hr />
 				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -135,6 +293,7 @@
 					</div>
 				</div>-->
 				<div class="form-group">
+
 					<!--@Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })-->
 					<div class="col-md-offset-2 col-md-10">
 						<createtitle>Parent Name</createtitle>
@@ -143,6 +302,7 @@
 					</div>
 				</div>
 				<div class="form-group">
+
 					<!--@Html.LabelFor(model => model.AgeRange1, htmlAttributes: new { @class = "control-label col-md-2" })-->
 					<div class="col-md-offset-2 col-md-10">
 						<div class="checkbox">
@@ -153,6 +313,7 @@
 					</div>
 				</div>
 				<div class="form-group">
+
 					<!--@Html.LabelFor(model => model.AgeRange2, htmlAttributes: new { @class = "control-label col-md-2" })-->
 					<div class="col-md-offset-2 col-md-10">
 						<div class="checkbox">
@@ -163,6 +324,7 @@
 					</div>
 				</div>
 				<div class="form-group">
+
 					<!--@Html.LabelFor(model => model.AgeRange3, htmlAttributes: new { @class = "control-label col-md-2" })-->
 					<div class="col-md-offset-2 col-md-10">
 						<div class="checkbox">
@@ -175,20 +337,29 @@
 				@{
 					var genders = new SelectList(new[]
 					{
-						new SelectListItem { Text = "Boy", Value = "Boy"},
 						new SelectListItem { Text = "Girl", Value = "Girl"},
+						new SelectListItem { Text = "Boy", Value = "Boy"},
 					}, "Text", "Value");
 				}
 				<div class="form-group">
-					<!--@Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })-->
+
+				<!--@Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })-->
+
+				<div class="col-md-offset-2 col-md-10">
+					<createtitle>Child's Gender</createtitle>
 					<div class="col-md-offset-2 col-md-10">
-						<createtitle>Child's Gender</createtitle>
+						<createtitle></createtitle>
 						@Html.DropDownListFor(model => model.Gender, @genders)
 						@Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
 					</div>
 				</div>
 				<div class="form-group">
-					<!--@Html.LabelFor(model => model.Museum, htmlAttributes: new { @class = "control-label col-md-2" })-->
+
+				<!--@Html.LabelFor(model => model.Museum, htmlAttributes: new { @class = "control-label col-md-2" })-->
+
+				<div class="col-md-offset-2 col-md-10">
+				<div class="checkbox">
+										
 					<div class="col-md-offset-2 col-md-10">
 						<div class="checkbox">
 							<createtitle>Museum</createtitle>
@@ -198,6 +369,7 @@
 					</div>
 				</div>
 				<div class="form-group">
+
 					<!--@Html.LabelFor(model => model.Outdoors, htmlAttributes: new { @class = "control-label col-md-2" })-->
 					<div class="col-md-offset-2 col-md-10">
 						<div class="checkbox">
@@ -208,7 +380,13 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<!--@Html.LabelFor(model => model.Active, htmlAttributes: new { @class = "control-label col-md-2" })-->
+
+				<!--@Html.LabelFor(model => model.Active, htmlAttributes: new { @class = "control-label col-md-2" })-->
+
+				<div class="col-md-offset-2 col-md-10">
+				<div class="checkbox">
+					<createtitle>
+
 					<div class="col-md-offset-2 col-md-10">
 						<div class="checkbox">
 							<createtitle>Active</createtitle>
@@ -218,166 +396,180 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<!--@Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })-->
+
+				<!--@Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })-->
+
+				<div class="col-md-offset-2 col-md-10">
+					<createtitle>Email</createtitle>
+													
 					<div class="col-md-offset-2 col-md-10">
-						<createtitle>Email</createtitle>
+						<createtitle></createtitle>
+
 						@Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
 						@Html.ValidationMessageFor(model => model.Email, "An email is required.", new { @class = "text-danger" })
 					</div>
 				</div>
 				<div class="form-group">
+
 					<!--@Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })-->
+
 					<div class="col-md-offset-2 col-md-10">
 						<createtitle>Phone</createtitle>
-						@Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
-						@Html.ValidationMessageFor(model => model.Phone, "A phone number is required.", new { @class = "text-danger" })
+														
+						<div class="col-md-offset-2 col-md-10">
+							<createtitle></createtitle>
+
+							@Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+							@Html.ValidationMessageFor(model => model.Phone, "A phone number is required.", new { @class = "text-danger" })
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-offset-2 col-md-10">
+							<input type="submit" value="Find Playmates!" class="btn btn-default" />
+						</div>
 					</div>
 				</div>
-				<div class="form-group">
-					<div class="col-md-offset-2 col-md-10">
-						<input type="submit" value="Find Playmates!" class="btn btn-default" />
+			</div>
+		</body>*@
+
+
+							}
+
+
+
+			@model MomCom.Models.User
+
+
+			@{
+				ViewBag.Title = "PLAYFILE";
+			}
+
+			@*<h2>PLAYFILE</h2>
+				@using (Html.BeginForm())
+				{
+					@Html.AntiForgeryToken()
+					<h4>Find Playmates & Make Playdates!</h4>
+					<head></head>
+					<body>
+					<div class="form-horizontal">
+						<!-- <h4>User</h4> -->
+						<hr />
+						@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+						<!-- <div class="form-group">
+							@Html.LabelFor(model => model.PersonId, htmlAttributes: new { @class = "control-label col-md-2" })
+							<div class="col-md-10">
+								@Html.EditorFor(model => model.PersonId, new { htmlAttributes = new { @class = "form-control" } })
+								@Html.ValidationMessageFor(model => model.PersonId, "", new { @class = "text-danger" })
+							</div>
+						</div>-->
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<createtitle>Parent Name</createtitle>
+								@Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+								@Html.ValidationMessageFor(model => model.FirstName, "A parent name is required.", new { @class = "text-danger" })
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.AgeRange1, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<div class="checkbox">
+									@Html.EditorFor(model => model.AgeRange1)
+									@Html.ValidationMessageFor(model => model.AgeRange1, "", new { @class = "text-danger" })
+									<createtitle>Age 0-3</createtitle>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.AgeRange2, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<div class="checkbox">
+									@Html.EditorFor(model => model.AgeRange2)
+									@Html.ValidationMessageFor(model => model.AgeRange2, "", new { @class = "text-danger" })
+									<createtitle>Age 4-7</createtitle>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.AgeRange3, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<div class="checkbox">
+									@Html.EditorFor(model => model.AgeRange3)
+									@Html.ValidationMessageFor(model => model.AgeRange3, "", new { @class = "text-danger" })
+									<createtitle>Age 8-10</createtitle>
+								</div>
+							</div>
+						</div>
+						@{
+							var genders = new SelectList(new[]
+							{
+								new SelectListItem { Text = "Boy", Value = "Boy"},
+								new SelectListItem { Text = "Girl", Value = "Girl"},
+							}, "Text", "Value");
+						}
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<createtitle>Child's Gender</createtitle>
+								@Html.DropDownListFor(model => model.Gender, @genders)
+								@Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.Museum, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<div class="checkbox">
+									<createtitle>Museum</createtitle>
+									@Html.EditorFor(model => model.Museum)
+									@Html.ValidationMessageFor(model => model.Museum, "", new { @class = "text-danger" })
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.Outdoors, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<div class="checkbox">
+									<createtitle>Outdoors</createtitle>
+									@Html.EditorFor(model => model.Outdoors)
+									@Html.ValidationMessageFor(model => model.Outdoors, "", new { @class = "text-danger" })
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.Active, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<div class="checkbox">
+									<createtitle>Active</createtitle>
+									@Html.EditorFor(model => model.Active)
+									@Html.ValidationMessageFor(model => model.Active, "", new { @class = "text-danger" })
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<createtitle>Email</createtitle>
+								@Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+								@Html.ValidationMessageFor(model => model.Email, "An email is required.", new { @class = "text-danger" })
+							</div>
+						</div>
+						<div class="form-group">
+							<!--@Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })-->
+							<div class="col-md-offset-2 col-md-10">
+								<createtitle>Phone</createtitle>
+								@Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+								@Html.ValidationMessageFor(model => model.Phone, "A phone number is required.", new { @class = "text-danger" })
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-10">
+								<input type="submit" value="Find Playmates!" class="btn btn-default" />
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		</body>
+					</body>
+				}*@
 
-		}
-
-
-
-@model MomCom.Models.User
-
-
-@{
-	ViewBag.Title = "PLAYFILE";
-}
-
-@*<h2>PLAYFILE</h2>
-@using (Html.BeginForm())
-{
-	@Html.AntiForgeryToken()
-	<h4>Find Playmates & Make Playdates!</h4>
-	<head></head>
-	<body>
-	<div class="form-horizontal">
-		<!-- <h4>User</h4> -->
-		<hr />
-		@Html.ValidationSummary(true, "", new { @class = "text-danger" })
-		<!-- <div class="form-group">
-			@Html.LabelFor(model => model.PersonId, htmlAttributes: new { @class = "control-label col-md-2" })
-			<div class="col-md-10">
-				@Html.EditorFor(model => model.PersonId, new { htmlAttributes = new { @class = "form-control" } })
-				@Html.ValidationMessageFor(model => model.PersonId, "", new { @class = "text-danger" })
-			</div>
-		</div>-->
-		<div class="form-group">
-			<!--@Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })-->
-			<div class="col-md-offset-2 col-md-10">
-				<createtitle>Parent Name</createtitle>
-				@Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
-				@Html.ValidationMessageFor(model => model.FirstName, "A parent name is required.", new { @class = "text-danger" })
-			</div>
-		</div>
-		<div class="form-group">
-			<!--@Html.LabelFor(model => model.AgeRange1, htmlAttributes: new { @class = "control-label col-md-2" })-->
-			<div class="col-md-offset-2 col-md-10">
-				<div class="checkbox">
-					@Html.EditorFor(model => model.AgeRange1)
-					@Html.ValidationMessageFor(model => model.AgeRange1, "", new { @class = "text-danger" })
-					<createtitle>Age 0-3</createtitle>
-				</div>
-			</div>
-		</div>
-		<div class="form-group">
-			<!--@Html.LabelFor(model => model.AgeRange2, htmlAttributes: new { @class = "control-label col-md-2" })-->
-			<div class="col-md-offset-2 col-md-10">
-				<div class="checkbox">
-					@Html.EditorFor(model => model.AgeRange2)
-					@Html.ValidationMessageFor(model => model.AgeRange2, "", new { @class = "text-danger" })
-					<createtitle>Age 4-7</createtitle>
-				</div>
-			</div>
-		</div>
-		<div class="form-group">
-			<!--@Html.LabelFor(model => model.AgeRange3, htmlAttributes: new { @class = "control-label col-md-2" })-->
-			<div class="col-md-offset-2 col-md-10">
-				<div class="checkbox">
-					@Html.EditorFor(model => model.AgeRange3)
-					@Html.ValidationMessageFor(model => model.AgeRange3, "", new { @class = "text-danger" })
-					<createtitle>Age 8-10</createtitle>
-				</div>
-			</div>
-		</div>
-		@{
-			var genders = new SelectList(new[]
-			{
-				new SelectListItem { Text = "Boy", Value = "Boy"},
-				new SelectListItem { Text = "Girl", Value = "Girl"},
-			}, "Text", "Value");
-		}
-		<div class="form-group">
-			<!--@Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })-->
-			<div class="col-md-offset-2 col-md-10">
-				<createtitle>Child's Gender</createtitle>
-				@Html.DropDownListFor(model => model.Gender, @genders)
-				@Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
-			</div>
-		</div>
-		<div class="form-group">
-			<!--@Html.LabelFor(model => model.Museum, htmlAttributes: new { @class = "control-label col-md-2" })-->
-			<div class="col-md-offset-2 col-md-10">
-				<div class="checkbox">
-					<createtitle>Museum</createtitle>
-					@Html.EditorFor(model => model.Museum)
-					@Html.ValidationMessageFor(model => model.Museum, "", new { @class = "text-danger" })
-				</div>
-			</div>
-		</div>
-		<div class="form-group">
-			<!--@Html.LabelFor(model => model.Outdoors, htmlAttributes: new { @class = "control-label col-md-2" })-->
-			<div class="col-md-offset-2 col-md-10">
-				<div class="checkbox">
-					<createtitle>Outdoors</createtitle>
-					@Html.EditorFor(model => model.Outdoors)
-					@Html.ValidationMessageFor(model => model.Outdoors, "", new { @class = "text-danger" })
-				</div>
-			</div>
-		</div>
-		<div class="form-group">
-			<!--@Html.LabelFor(model => model.Active, htmlAttributes: new { @class = "control-label col-md-2" })-->
-			<div class="col-md-offset-2 col-md-10">
-				<div class="checkbox">
-					<createtitle>Active</createtitle>
-					@Html.EditorFor(model => model.Active)
-					@Html.ValidationMessageFor(model => model.Active, "", new { @class = "text-danger" })
-				</div>
-			</div>
-		</div>
-		<div class="form-group">
-			<!--@Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })-->
-			<div class="col-md-offset-2 col-md-10">
-				<createtitle>Email</createtitle>
-				@Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-				@Html.ValidationMessageFor(model => model.Email, "An email is required.", new { @class = "text-danger" })
-			</div>
-		</div>
-		<div class="form-group">
-			<!--@Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })-->
-			<div class="col-md-offset-2 col-md-10">
-				<createtitle>Phone</createtitle>
-				@Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
-				@Html.ValidationMessageFor(model => model.Phone, "A phone number is required.", new { @class = "text-danger" })
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-md-offset-2 col-md-10">
-				<input type="submit" value="Find Playmates!" class="btn btn-default" />
-			</div>
-		</div>
-	</div>
-	</body>
-}*@
-
-@section Scripts {
-	@Scripts.Render("~/bundles/jqueryval")
-}
+			@section Scripts {
+				@Scripts.Render("~/bundles/jqueryval")
+			}</section>

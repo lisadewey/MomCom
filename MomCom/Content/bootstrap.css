@@ -52,7 +52,7 @@ audio:not([controls]) {
 }
 
 html {
-  font-family: sans-serif;
+  font-family: "Lato", sans-serif;
   -webkit-text-size-adjust: 100%;
 	  -ms-text-size-adjust: 100%;
 }
@@ -1754,6 +1754,7 @@ textarea.form-control {
 
 .form-group {
   margin-bottom: 15px;
+	align-items: left;
 }
 
 .radio,
@@ -1964,6 +1965,7 @@ textarea.input-lg {
   padding-top: 7px;
   margin-top: 0;
   margin-bottom: 0;
+  text-align: left;
 }
 
 .form-horizontal .form-group {
